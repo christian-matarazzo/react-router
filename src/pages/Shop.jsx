@@ -17,12 +17,6 @@ export default function Shop() {
             })
 
     }, [])
-
-
-
-
-
-
     return (
         <main>
             <div className="container py-5">

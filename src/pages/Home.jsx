@@ -2,18 +2,19 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <main>
-            <div className="container-fluid bg-light shadow-sm">
+<main className="min-vh-100 d-flex flex-column justify-content-center bg-light">
+            <div className="container-fluid py-5">
                 <div className="container">
-                    <div className="row ">
-                    <div className="h1 ">Welcome to Reacta.</div>
-                        <div className="col">
-                            <p className="h3">Your new look at just one click away.</p>
-                            <Link to="/shop" className="btn btn-dark btn-lg px-4 me-2 my-3">Buy now</Link>
+                    <div className="row align-items-center"> {/* Centra verticalmente testo e immagine */}
+                        <div className="col-md-6">
+                            <h1 className="display-3 fw-bold">Welcome to Reacta.</h1>
+                            <p className="h3 text-muted">Your new look at just one click away.</p>
+                            <Link to="/shop" className="btn btn-dark btn-lg px-5 my-4 shadow">
+                                Buy now
+                            </Link>
                         </div>
-                        <div className="col">
-                           <img src="/lady-commerce.png" className="w-50 mx-auto" alt="" />
-
+                        <div className="col-md-6 text-center">
+                            <img src="/lady-commerce2.png" className="img-fluid " alt="Lady Commerce" />
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ export default function AppFooter() {
                         <ul className="list-unstyled">
                             <li>
                                 <p>Reacta@onlineshop.eu</p>
-                                <p>ChristianTheCeo@onlineshop.eu</p>
+                                <p>Chris@onlineshop.eu</p>
                             </li>
                         </ul>
                     </div>
