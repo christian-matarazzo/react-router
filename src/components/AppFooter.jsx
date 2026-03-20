@@ -1,5 +1,11 @@
 export default function AppFooter() {
-    return(
-        <h1>Ciao</h1>
+    return (
+        <footer>
+            <div className="container">
+                <div className="row">
+                    <div className="col"></div>
+                </div>
+            </div>
+        </footer>
     )
 }
