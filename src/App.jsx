@@ -6,6 +6,7 @@ import AboutUs from './pages/AboutUs'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import SingleProduct from './pages/SingleProduct'
+import Error from './pages/Error'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/about-us" element={<AboutUs />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/shop/:id" element={<SingleProduct />}> </Route>
+            <Route path="/error" element= {<Error></Error>}></Route>
           </Route>
 
         </Routes>

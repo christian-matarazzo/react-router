@@ -1,24 +1,33 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function SingleProduct() {
     const [singleProduct, setSingleProduct] = useState(null)
-
+    const navigate = useNavigate()
     const { id } = useParams()
 
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then(response => {
                  console.log("Sono il pacchetto", response.data);
-                setSingleProduct(response.data)
+                 if (!response.data || response.data.id != id) {
+                    navigate("/Error")
+
+                 } else {setSingleProduct(response.data)}
+                
     
             })
             .catch(error => {
-                console.error(error)
+                console.log("Errore", console.log(error))
+                
+                
+                
+                    {navigate("/Error")}
+                
             })
 
-    }, [id])
+    }, [id, navigate])
 
 return (
     <main className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
@@ -30,8 +39,7 @@ return (
                             src={singleProduct?.image}
                             className="img-fluid"
                             style={{ maxHeight: '350px', width: '100%', objectFit: 'contain' }}
-                            alt={singleProduct?.title}
-                        />
+                            alt={singleProduct?.title}/>
                     </div>
                     <div className="col-md-7">
                         <div className="card-body p-4">
