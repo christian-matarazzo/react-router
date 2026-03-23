@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom"
-
 export default function AppHeader() {
-    /* navbar array obj  */
     const navBar = [
         {
             id: 1,
@@ -21,7 +19,6 @@ export default function AppHeader() {
 
 
     ]
-
 
     return (
         <header>

@@ -1,4 +1,3 @@
-import { main } from "@popperjs/core"
 import { Link } from "react-router-dom"
 export default function Error() {
     return (
@@ -10,5 +9,4 @@ export default function Error() {
             </div>
         </main>
     )
-
 }

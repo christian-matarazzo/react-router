@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-<main className="min-vh-100 d-flex flex-column justify-content-center bg-light">
+        <main className="min-vh-100 d-flex flex-column justify-content-center bg-light">
             <div className="container-fluid py-5">
                 <div className="container">
                     <div className="row align-items-center">

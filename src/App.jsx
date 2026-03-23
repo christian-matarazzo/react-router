@@ -1,6 +1,5 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import axios from 'axios'
 import DefaultLayout from './layouts/DefaultLayout'
 import AboutUs from './pages/AboutUs'
 import Home from './pages/Home'
@@ -9,7 +8,6 @@ import SingleProduct from './pages/SingleProduct'
 import Error from './pages/Error'
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -21,11 +19,9 @@ function App() {
             <Route path="/shop/:id" element={<SingleProduct />}> </Route>
             <Route path="/error" element={<Error></Error>}></Route>
           </Route>
-
         </Routes>
       </BrowserRouter>
     </>
   )
 }
-
 export default App

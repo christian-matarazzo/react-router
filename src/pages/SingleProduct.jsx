@@ -10,23 +10,14 @@ export default function SingleProduct() {
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then(response => {
-                console.log("Sono il pacchetto", response.data);
                 if (!response.data || response.data.id != id) {
                     navigate("/Error")
-
                 } else { setSingleProduct(response.data) }
-
-
             })
             .catch(error => {
                 console.log("Errore", console.log(error))
-
-
-
                 { navigate("/Error") }
-
             })
-
     }, [id, navigate])
 
     return (
@@ -47,13 +38,10 @@ export default function SingleProduct() {
                                     <div className="mb-2">
                                         <span className="badge bg-success-subtle text-success border border-success-subtle px-3">Avaliable</span>
                                     </div>
-
                                     <h2 className="card-title fw-bold mb-3">{singleProduct?.title}</h2>
-
                                     <p className="card-text text-muted mb-4" style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                                         {singleProduct?.description}
                                     </p>
-
                                     <h3 className="fw-bold text-primary mb-4">
                                         {singleProduct?.price} €
                                     </h3>

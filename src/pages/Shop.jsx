@@ -4,21 +4,17 @@ import { Link } from "react-router-dom"
 import { Atom } from "react-loading-indicators"
 
 export default function Shop() {
-
     const [products, setProducts] = useState([])
-
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
             .then(response => {
-                console.log("Sono il pacchetto", response.data);
                 setProducts(response.data)
-
             })
             .catch(error => {
                 console.error(error)
             })
-
     }, [])
+
     return (
         <main className="d-flex justify-content-center align-items-center min-vh-100 ">
             <div className="container py-5">
