@@ -1,5 +1,6 @@
 import axios from "axios"
 import {useState, useEffect} from "react"
+import { Link } from "react-router-dom"
 
 export default function Shop() {
 
@@ -24,6 +25,7 @@ export default function Shop() {
                 <div className="row g-4 justify-content-center" >
                 {products.map(product => 
                     <div className="col col-12 col-md-6 col-lg-4 d-flex justify-content-center" key={product.id}>
+                        
                         <div className="card d-flex flex-column"  style={{ width: '16rem'}}>
                             <img
                                 src={product.image}
@@ -34,9 +36,10 @@ export default function Shop() {
                             <div className="card-body">
                                 <h5 className="card-title">{product.title}</h5>
                                 <h6 className="card-subtitle mb-2 ">{`${product.price} €`}</h6>
+                        <Link to = {`/shop/${product.id}`} className="btn btn-dark btn-lg px-5 my-4 shadow">View More</Link>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 )}
                 </div>
 

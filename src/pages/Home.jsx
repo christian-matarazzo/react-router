@@ -5,7 +5,7 @@ export default function Home() {
 <main className="min-vh-100 d-flex flex-column justify-content-center bg-light">
             <div className="container-fluid py-5">
                 <div className="container">
-                    <div className="row align-items-center"> {/* Centra verticalmente testo e immagine */}
+                    <div className="row align-items-center">
                         <div className="col-md-6">
                             <h1 className="display-3 fw-bold">Welcome to Reacta.</h1>
                             <p className="h3 text-muted">Your new look at just one click away.</p>
